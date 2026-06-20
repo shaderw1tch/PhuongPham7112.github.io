@@ -9,7 +9,7 @@ tags: [raytracer, OpenGL, computer-graphics]
 
 First time learning to build raytracer from scratch using OpenGL.
 
-# Raytracing Logic
+## Raytracing Logic
 
 1. Shoot a primary ray from the camera pixel by pixel within a frame
 2. Calculate to determine whether the ray hits any object, two types of geometry in the scene was Triangle and Sphere 
@@ -18,7 +18,7 @@ First time learning to build raytracer from scratch using OpenGL.
 5. If in shadow, render black. If not in shadow, render the color using Phong shading
 6. Shoot recursive reflection from that hit spot as well, rinse and repeat
 
-# Demo
+## Demo
 
 Below are some of the result pictures:
 ![Picture 1](/assets/raytracer_img/test1.webp)
@@ -27,11 +27,11 @@ Below are some of the result pictures:
 ![Picture 4](/assets/raytracer_img/spheres.webp)
 ![Picture 5](/assets/raytracer_img/SIGGRAPH.webp)
 
-# Sources
+## Sources
 
 🔗 [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/airi-raytracer)
 
-# 🛠️ Tools used
+## 🛠️ Tools used
 
 - C++
 - OpenGL

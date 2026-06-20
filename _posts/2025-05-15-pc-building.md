@@ -16,7 +16,7 @@ Before starting my build, I used PC Part Picker to research and select compatibl
 
 As a total newbie, I followed [Linus Tech Tips PC Build Guide (2024)](https://youtu.be/s1fxZ-VWs2U?si=JdHXQ1XORkeeWzov). The order is as follows:
 
-**1. Install the CPU on the motherboard**: First, I opened the socket in the middle of the motherboard by undoing the latch, inspect the grid of golden pins - where the CPU will sit - to ensure no pin is deformed. 
+**1. Install the CPU on the motherboard**: First, I opened the socket in the middle of the motherboard by undoing the latch, inspect the grid of golden pins - where the CPU will sit - to ensure no pin is deformed.
 
 ![slot](https://cdn.mos.cms.futurecdn.net/Pb4SkVrmoA7QNpAtwBW9qS-970-80.jpg)
 
@@ -70,6 +70,7 @@ Building a PC is not as scary as it feels to me. Fortunately on my part, nothing
 I used my build to do personal graphics programming stuff, playing games, and coding projects. Things are going smooth so far, but I will need to do more stress testing. The cable management situation is pretty much neglected, for one I am not too big on the aesthetics (no RGB whatsoever). Nonetheless, it will be the first thing I will do to enable better airflow in case things get heated up.
 
 ## Tools Used
+
 - Screw driver
 - My brother and a lot of guides: [Linus Tech Tips PC Build Guide (2024)](https://youtu.be/s1fxZ-VWs2U?si=JdHXQ1XORkeeWzov), [Wikihow](https://www.wikihow.com/Install-a-Graphics-Card), [Tom's Hardware](https://www.tomshardware.com/how-to/build-a-pc#section-installing-the-graphics-card), [Tech Radar](https://www.techradar.com/how-to/how-to-install-an-m2-nvmesata-ssd-on-your-pc)
 - Blood, sweat, and tears

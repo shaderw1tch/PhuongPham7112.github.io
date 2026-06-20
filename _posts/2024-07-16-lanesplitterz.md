@@ -10,7 +10,8 @@ Lanesplitterz was my first time trying out a project that's very stylized. Since
 
 ![Toon shading](/assets/lanesplitterz/content.webp)
 
-# Implementation
+## Implementation
+
 The basic idea is to use edge detection to notice big changes in color, depth, and normal of an object. I calculated this with Sobel filter and use the result to lerp and blend the screen filter however I liked, such as tuning the color depending on the depth or the intensity of the line art.
 
 ![Shadergraph](/assets/lanesplitterz/image.png)
@@ -68,12 +69,14 @@ void ColorSobel_float(float2 UV, float ColorLineThickness, out float Out)
 }
 ```
 
-# Adding VFX Juice
+## Adding VFX Juice
+
 The rest is just adding some stylized VFXs whipped up from VFX Graph and Particle Systems. 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/hfwO2Cd6g7I?si=PiMZvkYjdBDN9OF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# 🛠️ Tools used
+## 🛠️ Tools used
+
 - C#
 - HLSL
 - Unity
