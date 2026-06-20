@@ -4,6 +4,7 @@ title:  "3D Game Engine in DX11"
 summary: "ITP 485 - A 3D game engine in DirectX11"
 date:   2024-01-09
 preview: /assets/game_engine/preview.webp
+tags: [computer-graphics, dx11, C++]
 ---
 
 Implemented a game engine using DX11 with the following features:\
