@@ -29,6 +29,8 @@ This was a $0 build. All I needed was my 6-year-old laptop with somewhat decent 
 - Personal Drive for Media with Immich
 - Network-wide Ad Block
 
+![zima client](/assets/homelab/image.png)
+
 ## What I Learned
 
 A fun hardware project does not need to be super difficult to start out, especially if you know what will work for you. It was super liberating to own all of my content, knowing that I owe no external vendor. As I dive deeper into the hobby, there are many ways to take homelab even further with specialized enterprise servers and more advanced OS options.
