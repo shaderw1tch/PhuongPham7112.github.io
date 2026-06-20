@@ -26,7 +26,7 @@ Feel free to reach out to discuss whatever swe, games, or graphics stuff via [Li
 
 ## Experience
 
-- Associate Technical Artist at Respawn - EA (July 2025 - now)
+- Associate Technical Artist @ Respawn - EA (July 2025 - now)
 - Technical Artist Intern @ Respawn - EA (Summer 2024)
 - Software Engineer Intern @ Goldman Sachs (Summer 2022 & 2023)
 
