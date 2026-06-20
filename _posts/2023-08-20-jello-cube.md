@@ -24,7 +24,7 @@ Extra fancy stuff:
 Here are some *bouncy* animations to look at:
 <iframe width="800" height="450" src="https://www.youtube.com/embed/_agj89SzhhE?si=tIaK5ICll78FBAoc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Sources
+## Links
 
 🔗 [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/airi-jello-cube) \
 🔗 [CSCI 520: Jello Cube assignment](https://viterbi-web.usc.edu/~jbarbic/cs520-s24/assign1/)

@@ -44,7 +44,7 @@ To make the ocean reactive to objects, I integrated the [iWave algorithm](https:
 
 I placed a camera above the ocean plane that captures silhouettes of objects intersecting or hovering above the water. This data is written into a **render texture**, which serves as the input to the iWave simulation.
 
-The iWave algorithm applies a **convolution kernel** to simulate ripple propagation outward from disturbance sources. The resulting **ripple texture** is sampled in the shader and blended with the FFT surface normals, allowing characters, boats, or other objects to leave trails and ripples in the water.
+The iWave algorithm applies a **convolution kernel** to simulate ripple propagation outward from disturbance Links. The resulting **ripple texture** is sampled in the shader and blended with the FFT surface normals, allowing characters, boats, or other objects to leave trails and ripples in the water.
 
 ```c++
 // iWave set up - the key part
@@ -97,7 +97,7 @@ void vert (inout appdata_full v)
 
 The shading model is built on a **Phong lighting model** enhanced with a **Fresnel term**. The Fresnel effect blends between diffuse ocean color and reflected sky color, giving the water its characteristic reflective look.
 
-Normals are combined from two sources:
+Normals are combined from two Links:
 
 1. **FFT normals** for large-scale ocean motion.
 2. **iWave ripple normals** for fine local interactions.
@@ -144,6 +144,7 @@ This combination of FFT, iWave, Fresnel, and foam creates a water surface thatâ€
 * Optimization for scaling bigger oceans
 * Boids simulation of seagulls
 
-## Sources
+## Links
 
 * [Github code](https://github.com/PhuongPham7112/unity-fluid-sim)
+* [Reddit post](https://www.reddit.com/r/GraphicsProgramming/s/MdzPqVATtk)

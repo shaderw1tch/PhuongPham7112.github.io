@@ -27,7 +27,7 @@ Below are some of the result pictures:
 ![Picture 4](/assets/raytracer_img/spheres.webp)
 ![Picture 5](/assets/raytracer_img/SIGGRAPH.webp)
 
-## Sources
+## Links
 
 🔗 [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/airi-raytracer)
 

@@ -35,7 +35,7 @@ This was a $0 build. All I needed was my 6-year-old Dell 7540 Precision with a s
 
 A fun hardware project does not need to be super difficult to start out, especially if you know what will work for you. It was super liberating to own all of my content, knowing that I owe no external vendor. As I dive deeper into the hobby, there are many ways to take homelab even further with specialized enterprise servers and more advanced OS options.
 
-## Sources
+## Links
 
 - <https://www.joekarlsson.com/blog/how-to-get-started-building-a-homelab-server-in-2024/>
 - <https://stormagic.com/company/blog/what-is-homelab/>

@@ -20,5 +20,5 @@ Over the winter break, I made a software rasterizer with C++. The project helped
 ![Picture 1](/assets/renderer/output-1.webp)
 ![Picture 2](/assets/renderer/output-2.webp)
 
-### Resources
+## Links
 🔗 [Tiny renderer](https://github.com/ssloy/tinyrenderer/wiki)

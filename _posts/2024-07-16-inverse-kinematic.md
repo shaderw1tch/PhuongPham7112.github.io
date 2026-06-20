@@ -52,7 +52,7 @@ There are two ways to go about IK: regularization vs pseudo inverse. I experimen
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/AA19c3Jzv-Q?si=Lpo08munJUCcPLQJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Sources
+## Links
 
 🔗 [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/starter)
 

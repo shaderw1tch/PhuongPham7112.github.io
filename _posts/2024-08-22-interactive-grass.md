@@ -20,7 +20,7 @@ I then integrated grass culling thanks to the power of compute shader (for calcu
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/sC0xbtpJkTs?si=C6yHEhDa48w09iiq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Sources
+## Links
 
 🔗 [Responsive Real-Time Grass Rendering for General 3D Scenes](https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf) \
 🔗 [Bezier Arc Length](https://pomax.github.io/bezierinfo/#arclength)
