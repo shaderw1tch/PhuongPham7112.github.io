@@ -138,12 +138,12 @@ This combination of FFT, iWave, Fresnel, and foam creates a water surface thatâ€
 
 ## Further exploration
 
-- eWave instead of iWave
-- Other spectrum aside from Phillips
-- Physically accurate buoyancy
-- Optimization for scaling bigger oceans
-- Boids simulation of seagulls
+* eWave instead of iWave
+* Other spectrum aside from Phillips
+* Physically accurate buoyancy
+* Optimization for scaling bigger oceans
+* Boids simulation of seagulls
 
 ## Sources
 
-ðŸ”— [Github code](https://github.com/PhuongPham7112/unity-fluid-sim) 
+* [Github code](https://github.com/PhuongPham7112/unity-fluid-sim)
