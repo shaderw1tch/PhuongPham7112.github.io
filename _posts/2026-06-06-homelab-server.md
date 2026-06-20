@@ -12,7 +12,7 @@ Think of homelab as a private tech lab that is based in your own home and owned 
 
 ## How I Started
 
-This was a $0 build. All I needed was my 6-year-old laptop with somewhat decent spec: 64GB RAM, 1TB SSD, NVIDIA Quadro 3000 6GB. I kept my setup as simple as possible.
+This was a $0 build. All I needed was my 6-year-old Dell 7540 Precision with a somewhat decent spec: 64GB RAM, 1TB SSD, NVIDIA Quadro 3000 6GB. I kept my setup as simple as possible.
 
 1. Wipe Window OS
 2. Remove laptop battery
