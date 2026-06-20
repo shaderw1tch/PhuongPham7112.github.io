@@ -7,8 +7,9 @@ permalink: /about/
 > “You must have chaos within you to give birth to a dancing star.”
 >
 > ― Friedrich Nietzsche
-
-![Cosmos Image](/assets/about_me_img/soul.webp)
+<div style="text-align: center;">
+    <img src="assets/about_me_img/soul.webp" width="60%">
+</div>
 
 ## Hi, I'm Airi
 
