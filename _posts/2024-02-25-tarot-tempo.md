@@ -4,6 +4,7 @@ title:  "Tarot Tempo"
 summary: "Follow a lost soul on a rhythm-based journey"
 date:   2024-02-25
 preview: /assets/tarot_tempo/preview.webp
+tags: [game-dev, Unity, C#, Procreate]
 ---
 
 A little mobile rhythm-based game with a Tarot theme 🔮, inspired by my childhood games like Cytus and Aumobile. You can pull the project and play [here](https://github.com/PhuongPhamUSC/Tarot-Tempo). 

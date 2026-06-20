@@ -4,7 +4,7 @@ title:  "Something Fishy"
 summary: "An underwater mystery puzzle"
 date:   2024-02-21
 preview: /assets/something_fishy/preview.webp
-tags: [game-dev, puzzle, Unity]
+tags: [game-dev, puzzle, Unity, C#]
 ---
 
 ## Demo
