@@ -20,7 +20,7 @@ Like any other games, you know I had to make some shaders for that *juice*, feat
 
 ## Demo
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/rdOSvF4INEs?si=xKwK6DNhDG-csPWS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/rdOSvF4INEs?si=Djk6zuyC7-IC3NiI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 🛠️ Tools used
 
