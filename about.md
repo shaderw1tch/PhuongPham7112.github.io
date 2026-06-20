@@ -23,14 +23,12 @@ At the intersection of art & tech, I've done visual effects, physics simulation,
 My biggest hobby is learning, and my second one is solving puzzle games - whether it's boardgame or video game. Outside of work, I'm a plant mom who enjoys reading philosophy/classical novels and drawing things/people/memories I love.
 
 Feel free to reach out to discuss whatever swe, games, or graphics stuff via [LinkedIn](https://www.linkedin.com/in/phuong-pham-airi/), [Insta](https://www.instagram.com/shaderwitch/) or [phamairi@gmail.com](phamairi@gmail.com)
-<br>
 
 ## Experience
 
 - Associate Technical Artist at Respawn - EA (July 2025 - now)
 - Technical Artist Intern @ Respawn - EA (Summer 2024)
 - Software Engineer Intern @ Goldman Sachs (Summer 2022 & 2023)
-<br>
 
 ## Skills
 
