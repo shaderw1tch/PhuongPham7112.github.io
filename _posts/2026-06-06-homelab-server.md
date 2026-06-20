@@ -2,7 +2,7 @@
 layout: post
 title:  "Building a Homelab Server"
 summary: "Reusing my old laptop as a generic private & local server"
-preview: https://m.media-amazon.com/images/I/51LtjfJKjYL.jpg
+preview: /assets/homelab/preview.jpg
 tags: [hardware]
 ---
 
@@ -19,6 +19,8 @@ This was a $0 build. All I needed was my 6-year-old laptop with somewhat decent 
 3. Connect to Ethernet cable
 4. Boot ZimaOS
 5. Start tinkering from here
+
+![zimaos](https://manage.icewhale.io/api/static/docs/1727177117363_image.png)
 
 ## What I Have Done
 
