@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Renderer from Scratch"
+title:  "C++ 3D Renderer"
 summary: "Building a renderer with only C++"
 date:   2024-02-20
 preview: /assets/renderer/preview.webp
@@ -8,7 +8,8 @@ preview: /assets/renderer/preview.webp
 
 Over the winter break, I made a software rasterizer with C++. The project helped me a lot with understanding the rendering pipeline and the math behind OpenGL. [Source code](https://github.com/PhuongPham7112/rasterizer-from-scratch).
 
-### Rendered images
+## Rendered images
+
 - Gourald shaders: diffuse + specular + ambient
 - Normal mapping
 - Glow mapping
