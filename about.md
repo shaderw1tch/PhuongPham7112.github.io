@@ -4,24 +4,31 @@ title: "About Me"
 permalink: /about/
 ---
 
-![Picture 1](/assets/about-me.gif)
+> “You must have chaos within you to give birth to a dancing star.”
+>
+> ― Friedrich Nietzsche
 
-## Hello there
+![Cosmos Image](/assets/about_me_img/soul.webp)
 
-I’m Phuong Pham, but I normally go by Airi. I'm a Computer Science BS and MS graduate from University of Southern California.
+## Hi, I'm Airi
 
-Coming from a Computer Science background with an emphasis on Game Development, I was really able to study the foundational skills of both a developer and a designer. I’m interested in learning and creating graphics work that can enable story-telling or mechanisms in game development. I have always found myself gravitating towards the intersection of art & tech regardless of the GE classes that I have to go through.
+A technical artist at Respawn working on Apex Legends and Star Wars Jedi with Computer Science background from University of Southern California.
 
-I've done visual effects, physics simulation, shaders, tools scripting, and performance optimization for personal and team projects. Open to any challenges in the graphics space:)
+I’m interested in learning and creating graphics work that can enable story-telling or mechanisms in game development. At the intersection of art & tech, I've done visual effects, physics simulation, shaders, tools scripting, and performance optimization for personal and team projects. Open to any challenges in the graphics space:)
 
-My biggest hobby is learning, and my second one is solving puzzle games - whether it's boardgame or video game. Outside of work, I enjoy cooking, reading philosophy/classical novels, learning fashion history on the side, and drawing things/people/memories I love. 
+My biggest hobby is learning, and my second one is solving puzzle games - whether it's boardgame or video game. Outside of work, I'm a plant mom who enjoys reading philosophy/classical novels and drawing things/people/memories I love.
 
-Feel free to reach out to discuss whatever swe, games, or graphics stuff with me:)
+Feel free to reach out to discuss whatever swe, games, or graphics stuff via [LinkedIn](https://www.linkedin.com/in/phuong-pham-airi/), [Insta](https://www.instagram.com/shaderwitch/) or [phamairi@gmail.com](phamairi@gmail.com)
 
-## Skillset
+## Experience
+- Associate Technical Artist at Respawn - EA (July 2025 - now)
+- Technical Artist Intern @ Respawn - EA (Summer 2024)
+- Software Engineer Intern @ Goldman Sachs (Summer 2022 & 2023)
+
+## Skills
 I have experience on both art and technical sides, leaning towards the second more.
 - Languages: C#, C++, Python, Java, Javascript
 - Game Engine: Unreal, Unity
 - Graphics API: OpenGL, DirectX11
 - 3D Software: Maya, Houdini
-- Software Engineer: HTML, CSS, NextJS, SpringBoot
+- Fullstack: HTML, CSS, NextJS, SpringBoot
