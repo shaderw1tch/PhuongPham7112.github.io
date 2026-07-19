@@ -109,7 +109,7 @@ fn wrapParticle(p: ptr<function, Particle>) {
 const renderWGSL = `
 struct Particle { position: vec2f, velocity: vec2f }
 struct Params { time: f32, delta: f32, pointer: vec2f, count: u32, aspect: f32, _pad: vec2f }
-@group(0) @binding(0) var<storage, read_write> particles: array<Particle>;
+@group(0) @binding(0) var<storage, read> particles: array<Particle>;
 @group(0) @binding(1) var<uniform> params: Params;
 struct Out { @builtin(position) position: vec4f, @location(0) speed: f32 }
 @vertex fn vs(@builtin(vertex_index) vertex: u32, @builtin(instance_index) instance: u32) -> Out {
@@ -132,7 +132,7 @@ struct Out { @builtin(position) position: vec4f, @location(0) speed: f32 }
   return vec4f(mix(slow, fast, in.speed), 0.76);
 }`;
 
-let device, context, format, particleBuffer, uniformBuffer, bindGroup, renderPipeline, computePipeline;
+let device, context, format, particleBuffer, uniformBuffer, computeBindGroup, renderBindGroup, computeLayout, renderLayout, renderPipeline, computePipeline;
 let particleCount = 8192, activePreset = 'orbit', running = true, lastTime = performance.now(), elapsed = 0, frameCounter = 0, fpsStamp = performance.now();
 let pointer = { x: 0, y: 0 }, speed = 1;
 
@@ -170,21 +170,24 @@ function createParticles() {
 }
 function rebuildBindGroup() {
   if (!device || !particleBuffer || !uniformBuffer) return;
-  if (!window.sharedLayout) window.sharedLayout = device.createBindGroupLayout({entries:[{binding:0,visibility:GPUShaderStage.COMPUTE|GPUShaderStage.VERTEX,buffer:{type:'storage'}},{binding:1,visibility:GPUShaderStage.COMPUTE|GPUShaderStage.VERTEX,buffer:{type:'uniform'}}]});
-  bindGroup = device.createBindGroup({layout:window.sharedLayout,entries:[{binding:0,resource:{buffer:particleBuffer}},{binding:1,resource:{buffer:uniformBuffer}}]});
+  if (!computeLayout) computeLayout = device.createBindGroupLayout({entries:[{binding:0,visibility:GPUShaderStage.COMPUTE,buffer:{type:'storage'}},{binding:1,visibility:GPUShaderStage.COMPUTE,buffer:{type:'uniform'}}]});
+  if (!renderLayout) renderLayout = device.createBindGroupLayout({entries:[{binding:0,visibility:GPUShaderStage.VERTEX,buffer:{type:'read-only-storage'}},{binding:1,visibility:GPUShaderStage.VERTEX,buffer:{type:'uniform'}}]});
+  const entries = [{binding:0,resource:{buffer:particleBuffer}},{binding:1,resource:{buffer:uniformBuffer}}];
+  computeBindGroup = device.createBindGroup({layout:computeLayout,entries});
+  renderBindGroup = device.createBindGroup({layout:renderLayout,entries});
   if (!renderPipeline) createRenderPipeline();
 }
 function createRenderPipeline() {
-  if (!device || !window.sharedLayout) return; const module = device.createShaderModule({code:renderWGSL});
-  renderPipeline = device.createRenderPipeline({layout:device.createPipelineLayout({bindGroupLayouts:[window.sharedLayout]}),vertex:{module,entryPoint:'vs'},fragment:{module,entryPoint:'fs',targets:[{format,blend:{color:{srcFactor:'src-alpha',dstFactor:'one',operation:'add'},alpha:{srcFactor:'one',dstFactor:'one',operation:'add'}}}]},primitive:{topology:'triangle-list'}});
+  if (!device || !renderLayout) return; const module = device.createShaderModule({code:renderWGSL});
+  renderPipeline = device.createRenderPipeline({layout:device.createPipelineLayout({bindGroupLayouts:[renderLayout]}),vertex:{module,entryPoint:'vs'},fragment:{module,entryPoint:'fs',targets:[{format,blend:{color:{srcFactor:'src-alpha',dstFactor:'one',operation:'add'},alpha:{srcFactor:'one',dstFactor:'one',operation:'add'}}}]},primitive:{topology:'triangle-list'}});
 }
 async function compileShader() {
-  if (!device || !window.sharedLayout) return;
+  if (!device || !computeLayout) return;
   const message = $('#compileMessage'); message.className = 'compile-message'; message.textContent = 'Compiling…';
   try {
     const module = device.createShaderModule({code: sharedWGSL + $('#shaderEditor').value}); const info = await module.getCompilationInfo(); const errors = info.messages.filter(m => m.type === 'error');
     if (errors.length) throw new Error(errors[0].message);
-    const pipeline = await device.createComputePipelineAsync({layout:device.createPipelineLayout({bindGroupLayouts:[window.sharedLayout]}),compute:{module,entryPoint:'simulate'}});
+    const pipeline = await device.createComputePipelineAsync({layout:device.createPipelineLayout({bindGroupLayouts:[computeLayout]}),compute:{module,entryPoint:'simulate'}});
     computePipeline = pipeline; message.className = 'compile-message success'; message.textContent = '✓ Shader compiled successfully'; $('#dirtyDot').classList.remove('visible');
   } catch (error) { message.className = 'compile-message error'; message.textContent = `× ${error.message}`; }
 }
@@ -193,8 +196,8 @@ function resize() { if (!device) return; const canvas = $('#gpuCanvas'); const b
 function frame(now) {
   if (!device) return; resize(); const rawDelta = Math.min((now-lastTime)/1000,.033); lastTime=now; if(running) elapsed += rawDelta*speed;
   const params = new ArrayBuffer(32); const f = new Float32Array(params); const u = new Uint32Array(params); f[0]=elapsed; f[1]=running?rawDelta*speed:0; f[2]=pointer.x; f[3]=pointer.y; u[4]=particleCount; f[5]=getAspect(); device.queue.writeBuffer(uniformBuffer,0,params);
-  const encoder=device.createCommandEncoder(); if(running&&computePipeline){const pass=encoder.beginComputePass();pass.setPipeline(computePipeline);pass.setBindGroup(0,bindGroup);pass.dispatchWorkgroups(Math.ceil(particleCount/64));pass.end();}
-  if(renderPipeline){const view=context.getCurrentTexture().createView();const pass=encoder.beginRenderPass({colorAttachments:[{view,clearValue:{r:.018,g:.025,b:.035,a:1},loadOp:'clear',storeOp:'store'}]});pass.setPipeline(renderPipeline);pass.setBindGroup(0,bindGroup);pass.draw(3,particleCount);pass.end();} device.queue.submit([encoder.finish()]);
+  const encoder=device.createCommandEncoder(); if(running&&computePipeline){const pass=encoder.beginComputePass();pass.setPipeline(computePipeline);pass.setBindGroup(0,computeBindGroup);pass.dispatchWorkgroups(Math.ceil(particleCount/64));pass.end();}
+  if(renderPipeline){const view=context.getCurrentTexture().createView();const pass=encoder.beginRenderPass({colorAttachments:[{view,clearValue:{r:.018,g:.025,b:.035,a:1},loadOp:'clear',storeOp:'store'}]});pass.setPipeline(renderPipeline);pass.setBindGroup(0,renderBindGroup);pass.draw(3,particleCount);pass.end();} device.queue.submit([encoder.finish()]);
   frameCounter++; if(now-fpsStamp>500){$('#fpsMetric').textContent=`${Math.round(frameCounter*1000/(now-fpsStamp))} fps`;frameCounter=0;fpsStamp=now;} requestAnimationFrame(frame);
 }
 
