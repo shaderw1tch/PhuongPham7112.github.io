@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Relaxing Ocean Simulation 🌊"
+title: "Relaxing Ocean Simulation 🌊"
 summary: "FFT-based ocean waves with iWave water interaction and GPU-driven buoyancy"
 preview: /assets/ocean/preview.webp
 tags: [Unity, HLSL, C, computer-animation, ocean-render]
@@ -20,14 +20,14 @@ Inspired by [*The Technical Art of Sea of Thieves*](https://www.youtube.com/watc
 
 I used the [Phillips spectrum](https://arxiv.org/pdf/1912.03945) to define the statistical distribution of wave heights given various parameters such as gravity, wind direction, choppiness, and amplitude. From this, I generated two key textures that will later go through iFFT compute shaders to extract spatial information:
 
-* **Displacement Map** – encodes vertical and horizontal wave displacement.
-* **Normal Map** – encodes surface orientation for light shading.
+- **Displacement Map** – encodes vertical and horizontal wave displacement.
+- **Normal Map** – encodes surface orientation for light shading.
 
 ![https://developer.download.nvidia.com/assets/gamedev/files/sdk/11/OceanCS_Slides.pdf](/assets/ocean/image.png)
 
 For further visual realism, I implemented foam generation by running a Jacobian test on the displacement map that could identify regions where waves fold or intersect - here, foam buildup would naturally happen. This produced breaking wave crests and dynamic foam patterns.
 
-```c++
+```cpp
 // https://people.computing.clemson.edu/~jtessen/reports/papers_files/coursenotes2004.pdf
 float jxx = 1 + lambda * dx_dx;
 float jyy = 1 + lambda * dy_dy;
@@ -46,7 +46,7 @@ I placed a camera above the ocean plane that captures silhouettes of objects int
 
 The iWave algorithm applies a **convolution kernel** to simulate ripple propagation outward from disturbance Links. The resulting **ripple texture** is sampled in the shader and blended with the FFT surface normals, allowing characters, boats, or other objects to leave trails and ripples in the water.
 
-```c++
+```cpp
 // iWave set up - the key part
 m_convolutionKernel = new float[(2 * m_kernelSize + 1) * (2 * m_kernelSize + 1)];
 
@@ -78,7 +78,7 @@ for (int k = -m_kernelSize; k <= m_kernelSize; k++)
 
 Objects floating on the water surface are displaced directly on GPU using the **FFT displacement map**. This ensures that buoyant objects ride the same waves visible in the rendering, keeping the physics and visuals in sync without extra CPU-side calculations.
 
-```c++
+```cpp
 // vertex shader
 void vert (inout appdata_full v)
 {
@@ -106,7 +106,7 @@ Foam textures are blended on top, guided by the Jacobian test results and displa
 
 A core section of the shader blends the FFT normals with iWave ripple normals before applying lighting:
 
-```c++
+```cpp
 // sample ripple texture (convert world pos to UV)
 float2 uv = i.worldVertex.xz / _MeshSize + 0.5f;
 
@@ -136,15 +136,15 @@ float foam = tex2D(_FoamTex, i.uv).r;
 
 This combination of FFT, iWave, Fresnel, and foam creates a water surface that’s not just realistic but also **interactive and dynamic**.
 
-## Further exploration
+## Further Exploration
 
-* eWave instead of iWave
-* Other spectrum aside from Phillips
-* Physically accurate buoyancy
-* Optimization for scaling bigger oceans
-* Boids simulation of seagulls
+- eWave instead of iWave
+- Other spectrum aside from Phillips
+- Physically accurate buoyancy
+- Optimization for scaling bigger oceans
+- Boids simulation of seagulls
 
 ## Links
 
-* [Github code](https://github.com/PhuongPham7112/unity-fluid-sim)
-* [Reddit post](https://www.reddit.com/r/GraphicsProgramming/s/MdzPqVATtk)
+- [Github code](https://github.com/PhuongPham7112/unity-fluid-sim)
+- [Reddit post](https://www.reddit.com/r/GraphicsProgramming/s/MdzPqVATtk)

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Something Fishy"
+title: "Something Fishy"
 summary: "An underwater mystery puzzle"
-date:   2024-02-21
+date: 2024-02-21
 preview: /assets/something_fishy/preview.webp
 tags: [game-dev, puzzle, Unity, C#]
 ---
@@ -13,14 +13,14 @@ tags: [game-dev, puzzle, Unity, C#]
 
 [🎮 Download the game here!](https://gumball7112.itch.io/something-fishy)
 
-## Intro
+## Introduction
 
 At the start of the semester, I got back into game development after a whole summer doing software engineering. I found myself asking what if there was a game simulating the experience of being Ariel, full of curiousity for the human world? I ran through a lot iterations for conveying such an idea.\
 What if there was a crime taking place by a coast, and you're a fish witnessing it, wanting to piece the truth together?\
 What if you're mermaid transformed human thrusted into this murder mystery?\
 After some thoughts, I ultimately settled on an idea that I could iterate on faster: the player is a fish stuck in a sunken house, and to find a way out, the fish has to collect clues and keys that unravel the story behind the house. And that's "Something Fishy".
 
-## The process
+## Process
 
 "Something Fishy" took me longer than expected. There was a lot I had to re-learn and learn like using the shader graph to recreate underwater environment, implementing object pooling to optimize the object inspection system, etc. I'll list all the materials and reLinks I used to build the game too.
 
@@ -28,11 +28,11 @@ Asides from absorbing all those techniques, I guess a surprising element was how
 
 ## Links
 
-🔗 [Caustics effects](https://ameye.dev/notes/realtime-caustics/) \
-🔗 [More caustics effects](https://www.alanzucconi.com/2019/09/13/believable-caustics-reflections/) \
-🔗 [Inventory system](https://youtu.be/oJAE6CbsQQA)
+- [Caustics effects](https://ameye.dev/notes/realtime-caustics/)
+- [More caustics effects](https://www.alanzucconi.com/2019/09/13/believable-caustics-reflections/)
+- [Inventory system](https://youtu.be/oJAE6CbsQQA)
 
-## 🛠️ Tools used
+## Tools Used
 
 - C#
 - Unity

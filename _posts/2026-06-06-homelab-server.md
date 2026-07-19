@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Homelab Server"
+title: "Building a Homelab Server"
 summary: "Reusing my old laptop as a generic private & local server"
 preview: /assets/homelab/preview.jpg
 tags: [hardware]

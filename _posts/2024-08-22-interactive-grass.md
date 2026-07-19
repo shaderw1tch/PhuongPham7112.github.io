@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GPU-driven Interactive Realtime Grass"
+title: "GPU-driven Interactive Realtime Grass"
 summary: "My touch-grass-simulator"
 preview: /assets/grass/preview.webp
 tags: [physics-simulation, Unity, HLSL, C#, computer-animation]
@@ -22,10 +22,10 @@ I then integrated grass culling thanks to the power of compute shader (for calcu
 
 ## Links
 
-🔗 [Responsive Real-Time Grass Rendering for General 3D Scenes](https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf) \
-🔗 [Bezier Arc Length](https://pomax.github.io/bezierinfo/#arclength)
+- [Responsive Real-Time Grass Rendering for General 3D Scenes](https://www.cg.tuwien.ac.at/research/publications/2017/JAHRMANN-2017-RRTG/JAHRMANN-2017-RRTG-draft.pdf)
+- [Bezier Arc Length](https://pomax.github.io/bezierinfo/#arclength)
 
-## 🛠️ Tools used
+## Tools Used
 
 - C#
 - HLSL

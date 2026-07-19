@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Soft body animation: Jello Cube demo"
+title: "Soft body animation: Jello Cube demo"
 summary: "CSCI 520: Simulating a jello cube in OpenGL"
-date:   2023-08-16
+date: 2023-08-16
 preview: /assets/jello_demo/preview.webp
 tags: [OpenGL, C++, computer-simulation]
 ---
@@ -26,10 +26,10 @@ Here are some *bouncy* animations to look at:
 
 ## Links
 
-🔗 [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/airi-jello-cube) \
-🔗 [CSCI 520: Jello Cube assignment](https://viterbi-web.usc.edu/~jbarbic/cs520-s24/assign1/)
+- [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/airi-jello-cube)
+- [CSCI 520: Jello Cube assignment](https://viterbi-web.usc.edu/~jbarbic/cs520-s24/assign1/)
 
-## 🛠️ Tools used
+## Tools Used
 
 - C++
 - OpenGL

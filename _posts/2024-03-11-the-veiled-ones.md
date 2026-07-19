@@ -1,15 +1,15 @@
 ---
 layout: post
-title:  "The Veiled Ones"
+title: "The Veiled Ones"
 summary: "A horror exorcism experience"
-date:   2024-03-11
+date: 2024-03-11
 preview: /assets/the_veiled_ones/preview.webp
 tags: [Unity, game-dev, USC, AGP, Steam]
 ---
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/M2wKEU77y4Q?si=5wfn8yishXLE-Gxw&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-I worked on a horror game with fellow USC students as a first-time technical artist. The game is available for free on [Steam](https://store.steampowered.com/app/2858390/The_Veiled_Ones/) right now! Below are some of my favorite effects I have made as a newbie in graphics programmer and VFX artist:D 
+I worked on a horror game with fellow USC students as a first-time technical artist. The game is available for free on [Steam](https://store.steampowered.com/app/2858390/The_Veiled_Ones/) right now! Below are some of my favorite effects I have made as a newbie in graphics programmer and VFX artist:D
 
 ## Implementation
 
@@ -23,7 +23,7 @@ I worked on a horror game with fellow USC students as a first-time technical art
 
 ### Flashlight
 
-An auto adjusting flashlight based on the screen's luminance. 
+An auto adjusting flashlight based on the screen's luminance.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/1ceNOvTyEPo?si=f33ZQruQmlwywAcJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -51,7 +51,7 @@ An auto adjusting flashlight based on the screen's luminance.
 
 [Things I learned about Perf](https://docs.google.com/document/d/e/2PACX-1vSWB8wU6kuQabpcm0mmU0ulQYmDAeaVWgHQ_QouRzUsffZbfX1QxToSWSGg6fMCqJgkLrlr7aceHm1Q/pub)
 
-## 🛠️ Tools used
+## Tools Used
 
 - C#
 - HLSL

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Toonshading in Lanesplitterz"
+title: "Toonshading in Lanesplitterz"
 summary: "Making effects for a stylized bowling game"
 preview: /assets/lanesplitterz/preview.webp
 tags: [shaders, HLSL, Unity, game-dev, tech-art]
@@ -16,8 +16,8 @@ The basic idea is to use edge detection to notice big changes in color, depth, a
 
 ![Shadergraph](/assets/lanesplitterz/image.png)
 
-```C++
-// EdgeDetectionOutlines.hlsl 
+```cpp
+// EdgeDetectionOutlines.hlsl
 static float2 sobelSamplePoints[9] = {
     float2(-1, 1), float2(0, 1), float2(1, 1),
     float2(-1, 0), float2(0, 0), float2(1, 0),
@@ -71,11 +71,11 @@ void ColorSobel_float(float2 UV, float ColorLineThickness, out float Out)
 
 ## Adding VFX Juice
 
-The rest is just adding some stylized VFXs whipped up from VFX Graph and Particle Systems. 
+The rest is just adding some stylized VFXs whipped up from VFX Graph and Particle Systems.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/hfwO2Cd6g7I?si=PiMZvkYjdBDN9OF1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## 🛠️ Tools used
+## Tools Used
 
 - C#
 - HLSL

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Particle Systems in Prime Engine"
+title: "Particle Systems in Prime Engine"
 summary: "Making of a particle system from scratch"
 preview: /assets/prime_engine/preview.webp
 tags: [game-engine, C++, particle-system]
@@ -14,7 +14,7 @@ A basic particle system with flipbook animation support. These additions bring a
 
 ### CPU-Based Particle System
 
-I created a foundational particle system that runs on the CPU. This system includes two main components: particle emitters and individual particles. 
+I created a foundational particle system that runs on the CPU. This system includes two main components: particle emitters and individual particles.
 This setup allows for flexible and controllable particle effects, laying the groundwork for more complex simulations in the future (particularly GPU-support and optimization).
 
 ### Transparency Rendering
@@ -91,7 +91,7 @@ I added a ground detection feature that applies gravity to Spheres when they're 
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/DYLmoc5cBxc?si=JJmaGEYI7T1LlYUt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## 🛠️ Tools used
+## Tools Used
 
 - C++
 - Prime Engine

@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Deforming 3D characters"
+title: "Deforming 3D characters"
 summary: "CSCI 520: Inverse Kinematics in Computer Animation"
 preview: /assets/ik/preview.webp
 tags: [IK, rigging, OpenGL]
 ---
 
-## Theory 
+## Theory
 
 Inverse Kinematic is one of the classic algorithms used for animation, an advancement for the previous more manual and memory-intensive methods such as keyframing each vertex of an arbitrary object. The IK problem is described as the following: given an skeleton input end effector at position (x1, x2) → how do I find the joint angle $\theta$?
 
@@ -33,7 +33,7 @@ Define a function for $\Delta \theta$ for an optimization problem:
 
 $$
 \begin{aligned}
-E(\Delta \theta) =  {1 \over 2}||J.\Delta \theta - \Delta x||^2 + {\lambda \over 2} ||\Delta \theta||^2 \\ 
+E(\Delta \theta) =  {1 \over 2}||J.\Delta \theta - \Delta x||^2 + {\lambda \over 2} ||\Delta \theta||^2 \\
 \Delta \theta =  \min_{\Delta \theta} {E(\Delta \theta)} \\
  \frac{\partial E}{\partial \Delta \theta} = (J \Delta \theta - \Delta x )^{T}.J + \lambda. (\Delta \theta)^{T}.I = 0 \\
  (J^T.J + \lambda.I). \Delta \theta = J^T.\Delta x
@@ -54,9 +54,9 @@ There are two ways to go about IK: regularization vs pseudo inverse. I experimen
 
 ## Links
 
-🔗 [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/starter)
+- [Github code](https://github.com/PhuongPham7112/airi-graphics-programming/tree/main/starter)
 
-## 🛠️ Tools used
+## Tools Used
 
 - C++
 - Eigen
