@@ -8,32 +8,31 @@ title: WebGPU Shader Lab
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07090d">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="An interactive WebGPU shader lab for learning compute simulations from first motion to flocking behavior.">
   <title>WebGPU Shader Lab — {{ site.title }}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/webgpu-lab/lab.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/webgpu-lab/portfolio-theme.css' | relative_url }}">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Back to {{ site.title }}">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>airi<span class="brand-dim"> / shader lab</span></span>
-    </a>
-    <div class="status" id="gpuStatus"><span class="status-dot"></span><span>Checking WebGPU</span></div>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="{{ '/highlight/' | relative_url }}">Highlight</a>
+      <a href="{{ '/' | relative_url }}">Posts</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a class="active" href="{{ '/webgpu/' | relative_url }}" aria-current="page">WebGPU Lab</a>
+      <a href="{{ '/resume/' | relative_url }}">Resume</a>
+    </nav>
+    <div class="status" id="gpuStatus" title="Checking WebGPU"><span class="status-dot"></span><span class="sr-only">Checking WebGPU</span></div>
   </header>
 
   <main class="shell">
     <section class="intro">
-      <p class="eyebrow">WebGPU / Compute playground</p>
-      <h1>Start with a spark.<br><span>Build a system.</span></h1>
       <p class="lede">Three editable simulations introduce GPU compute one layer at a time. Choose a stage, move your pointer through the field, then change the shader and make it yours.</p>
       <div class="stage-tabs" role="tablist" aria-label="Simulation complexity">
-        <button class="stage-tab active" role="tab" aria-selected="true" data-preset="orbit"><b>01</b><span>First motion<small>Gravity + damping</small></span></button>
-        <button class="stage-tab" role="tab" aria-selected="false" data-preset="flow"><b>02</b><span>Flow field<small>Curl + interaction</small></span></button>
-        <button class="stage-tab" role="tab" aria-selected="false" data-preset="flock"><b>03</b><span>Flocking<small>Emergent behavior</small></span></button>
+        <button class="stage-tab active" role="tab" aria-selected="true" data-preset="orbit"><b>01</b><span>First motion</span></button>
+        <button class="stage-tab" role="tab" aria-selected="false" data-preset="flow"><b>02</b><span>Flow field</span></button>
+        <button class="stage-tab" role="tab" aria-selected="false" data-preset="flock"><b>03</b><span>Flocking</span></button>
       </div>
     </section>
 
@@ -77,11 +76,6 @@ title: WebGPU Shader Lab
       </div>
     </section>
 
-    <section class="notes" id="notes">
-      <div><p class="eyebrow">What changed</p><h2 id="noteTitle">A force, a velocity, a position.</h2></div>
-      <p id="noteBody">Each invocation updates one particle in parallel. The shader pulls it toward the pointer, applies damping, and writes the next state back to GPU memory.</p>
-      <div class="pipeline" aria-label="Simulation pipeline"><span>CPU uniforms</span><i>→</i><span>Compute shader</span><i>→</i><span>Storage buffer</span><i>→</i><span>Render pass</span></div>
-    </section>
   </main>
 
   <script type="module" src="{{ '/assets/webgpu-lab/lab.js' | relative_url }}"></script>

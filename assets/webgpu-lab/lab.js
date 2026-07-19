@@ -143,7 +143,7 @@ function setPreset(name) {
   $('.stage-tab.active')?.classList.remove('active');
   document.querySelector(`[data-preset="${name}"]`).classList.add('active');
   document.querySelectorAll('.stage-tab').forEach(tab => tab.setAttribute('aria-selected', tab.dataset.preset === name));
-  $('#sceneLabel').textContent = preset.label; $('#noteTitle').textContent = preset.title; $('#noteBody').textContent = preset.body;
+  $('#sceneLabel').textContent = preset.label;
   $('#shaderEditor').value = preset.shader; $('#dirtyDot').classList.remove('visible'); updateLines(); compileShader();
 }
 
