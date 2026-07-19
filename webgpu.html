@@ -1,0 +1,89 @@
+---
+layout: null
+permalink: /webgpu/
+title: WebGPU Shader Lab
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="An interactive WebGPU shader lab for learning compute simulations from first motion to flocking behavior.">
+  <title>WebGPU Shader Lab — {{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/webgpu-lab/lab.css' | relative_url }}">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Back to {{ site.title }}">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>airi<span class="brand-dim"> / shader lab</span></span>
+    </a>
+    <div class="status" id="gpuStatus"><span class="status-dot"></span><span>Checking WebGPU</span></div>
+  </header>
+
+  <main class="shell">
+    <section class="intro">
+      <p class="eyebrow">WebGPU / Compute playground</p>
+      <h1>Start with a spark.<br><span>Build a system.</span></h1>
+      <p class="lede">Three editable simulations introduce GPU compute one layer at a time. Choose a stage, move your pointer through the field, then change the shader and make it yours.</p>
+      <div class="stage-tabs" role="tablist" aria-label="Simulation complexity">
+        <button class="stage-tab active" role="tab" aria-selected="true" data-preset="orbit"><b>01</b><span>First motion<small>Gravity + damping</small></span></button>
+        <button class="stage-tab" role="tab" aria-selected="false" data-preset="flow"><b>02</b><span>Flow field<small>Curl + interaction</small></span></button>
+        <button class="stage-tab" role="tab" aria-selected="false" data-preset="flock"><b>03</b><span>Flocking<small>Emergent behavior</small></span></button>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="WebGPU simulation workspace">
+      <div class="viewport-panel">
+        <div class="panel-bar">
+          <div><span class="live-dot"></span><span id="sceneLabel">FIRST MOTION</span></div>
+          <div class="metrics"><span id="particleMetric">8,192 particles</span><span id="fpsMetric">— fps</span></div>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap">
+          <canvas id="gpuCanvas" aria-label="Interactive particle simulation"></canvas>
+          <div class="canvas-grid" aria-hidden="true"></div>
+          <div class="hint" id="pointerHint">Move pointer to attract particles</div>
+          <div class="fallback" id="fallback" hidden>
+            <span class="fallback-icon">◇</span>
+            <h2>WebGPU isn’t available here</h2>
+            <p>Open this page in a current version of Chrome, Edge, or another WebGPU-enabled browser.</p>
+          </div>
+        </div>
+        <div class="controls">
+          <button class="icon-btn" id="playButton" aria-label="Pause simulation"><span id="playIcon">Ⅱ</span></button>
+          <button class="text-btn" id="resetButton">Reset</button>
+          <label class="range-control"><span>Speed</span><input id="speedRange" type="range" min="0.1" max="2" value="1" step="0.1"><output id="speedValue">1.0×</output></label>
+          <label class="range-control"><span>Particles</span><input id="particleRange" type="range" min="10" max="15" value="13" step="1"><output id="particleValue">8K</output></label>
+        </div>
+      </div>
+
+      <div class="code-panel">
+        <div class="panel-bar">
+          <div class="file-tab"><span class="wgsl-glyph">W</span> simulation.wgsl <span class="dirty-dot" id="dirtyDot"></span></div>
+          <button class="copy-btn" id="copyButton">Copy</button>
+        </div>
+        <div class="editor-wrap">
+          <div class="line-numbers" id="lineNumbers" aria-hidden="true"></div>
+          <textarea id="shaderEditor" aria-label="Editable WGSL compute shader" spellcheck="false"></textarea>
+        </div>
+        <div class="code-footer">
+          <p class="compile-message" id="compileMessage" role="status">Ready to compile</p>
+          <button class="apply-btn" id="applyButton"><span>↗</span> Apply shader <kbd>Ctrl ↵</kbd></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes" id="notes">
+      <div><p class="eyebrow">What changed</p><h2 id="noteTitle">A force, a velocity, a position.</h2></div>
+      <p id="noteBody">Each invocation updates one particle in parallel. The shader pulls it toward the pointer, applies damping, and writes the next state back to GPU memory.</p>
+      <div class="pipeline" aria-label="Simulation pipeline"><span>CPU uniforms</span><i>→</i><span>Compute shader</span><i>→</i><span>Storage buffer</span><i>→</i><span>Render pass</span></div>
+    </section>
+  </main>
+
+  <script type="module" src="{{ '/assets/webgpu-lab/lab.js' | relative_url }}"></script>
+</body>
+</html>
