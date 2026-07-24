@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deforming 3D characters"
+title: "3D Deformation with IK"
 summary: "CSCI 520: Inverse Kinematics in Computer Animation"
 preview: /assets/ik/preview.webp
 tags: [IK, rigging, OpenGL]

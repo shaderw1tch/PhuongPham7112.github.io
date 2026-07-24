@@ -6,9 +6,7 @@ preview: /assets/prime_engine/preview.webp
 tags: [WebGPU, WGSL, shaders, computer-graphics, simulation]
 ---
 
-The WebGPU Shader Lab is an interactive playground for exploring GPU compute through editable WGSL simulations. Start with a simple particle force, move into a dynamic flow field, and finish with emergent flocking behavior.
-
-Each stage runs directly in the browser. Move your pointer through the simulation, adjust its speed and particle count, or edit the shader and compile your changes live.
+My interactive playground for exploring GPU compute through editable WGSL simulations.
 
 [Open the WebGPU Shader Lab]({{ '/webgpu/' | relative_url }})
 
