@@ -2,7 +2,7 @@
 layout: post
 title: "WebGPU Shader Lab"
 summary: "Three editable GPU simulations, from first motion to emergent flocking"
-preview: /assets/prime_engine/preview.webp
+preview: /assets/webgpu-lab/preview.jpg
 tags: [WebGPU, WGSL, shaders, computer-graphics, simulation]
 ---
 
