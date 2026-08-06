@@ -20,6 +20,7 @@ tags: [game-dev, puzzle, Unity, C#]
 * Inventory system using object pooling architecture
 * Puzzle solving mechanism using keyboard/mouse inputs
 * Event-driven particle effects
+* UI/UX implementation
 
 ## Process
 
