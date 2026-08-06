@@ -16,9 +16,10 @@ tags: [game-dev, puzzle, Unity, C#]
 ## Implementation
 
 * Player movement
+* Camera logic
 * Inventory system using object pooling architecture
 * Puzzle solving mechanism using keyboard/mouse inputs
-* Events and state changes
+* Event-driven particle effects
 
 ## Process
 
