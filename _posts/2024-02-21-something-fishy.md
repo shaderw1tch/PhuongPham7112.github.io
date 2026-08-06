@@ -9,18 +9,23 @@ tags: [game-dev, puzzle, Unity, C#]
 
 ## Demo
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/YiQPrDfEPb4?si=ERZ8N4UD0zLQRbDF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/YiQPrDfEPb4?si=djqmNO2iCzb15hnx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [🎮 Download the game here!](https://gumball7112.itch.io/something-fishy)
 
-## Introduction
+## Implementation
+
+* Player movement
+* Inventory system using object pooling architecture
+* Puzzle solving mechanism using keyboard/mouse inputs
+* Events and state changes
+
+## Process
 
 At the start of the semester, I got back into game development after a whole summer doing software engineering. I found myself asking what if there was a game simulating the experience of being Ariel, full of curiousity for the human world? I ran through a lot iterations for conveying such an idea.\
 What if there was a crime taking place by a coast, and you're a fish witnessing it, wanting to piece the truth together?\
 What if you're mermaid transformed human thrusted into this murder mystery?\
 After some thoughts, I ultimately settled on an idea that I could iterate on faster: the player is a fish stuck in a sunken house, and to find a way out, the fish has to collect clues and keys that unravel the story behind the house. And that's "Something Fishy".
-
-## Process
 
 "Something Fishy" took me longer than expected. There was a lot I had to re-learn and learn like using the shader graph to recreate underwater environment, implementing object pooling to optimize the object inspection system, etc. I'll list all the materials and reLinks I used to build the game too.
 
