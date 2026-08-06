@@ -15,31 +15,37 @@ I worked on a horror game with fellow USC students as a first-time technical art
 
 ### Magic Looking Glass
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/I249mMw8_0c?si=eAu5maRifYZt60DK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+My first VFX I ever created in a game using Unity shader graph.
 
-### Screen FX
-
-<iframe width="800" height="450" src="https://www.youtube.com/embed/wHDN_bBg90o?si=Gn_1FmxFx33rYXRI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/I249mMw8_0c?si=IMfPOE1GoxV58oYC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Flashlight
 
-An auto adjusting flashlight based on the screen's luminance.
+An auto adjusting flashlight based on the screen's luminance using compute shader.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/1ceNOvTyEPo?si=f33ZQruQmlwywAcJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/1ceNOvTyEPo?si=8VfG9TXV9osr082s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Candles
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/7EwhWIKyCQE?si=hZkarkK4cSedqxwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+A fire VFX using UV distortion to create the flickering effect.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/7EwhWIKyCQE?si=8j5y7Amt81zP0xYp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Cloth physics and shader
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/wckqksqCzh4?si=Hht1-pEZbRHQhVGN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+I got the chance to tinker with Unity's built-in cloth simulation.
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/7EwhWIKyCQE?si=8j5y7Amt81zP0xYp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Exorcism VFX
+
+SDF-based particle effect for an intense cutscene in the game.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/Eug50cLfX1A?si=5I2yimuzkS9DnyyR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Footstep FX
+
+First time using decal and trigger event for an effect.
 
 <iframe width="800" height="450" src="https://www.youtube.com/embed/cNkogolSyks?si=OUZ39ZmpN38bUb1i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
