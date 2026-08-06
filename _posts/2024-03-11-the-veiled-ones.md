@@ -35,7 +35,7 @@ A fire VFX using UV distortion to create the flickering effect.
 
 I got the chance to tinker with Unity's built-in cloth simulation.
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/7EwhWIKyCQE?si=8j5y7Amt81zP0xYp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/wckqksqCzh4?si=axczLBwrTme9BxVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Exorcism VFX
 
