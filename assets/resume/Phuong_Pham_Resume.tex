@@ -1,0 +1,115 @@
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[
+  top=0.42in,
+  bottom=0.42in,
+  left=0.5in,
+  right=0.5in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage{parskip}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\titleformat{\section}
+  {\bfseries\small\MakeUppercase}
+  {}{0pt}{}
+\titlespacing*{\section}{0pt}{4pt}{2pt}
+
+\setlist[itemize]{
+  leftmargin=1.15em,
+  itemsep=0.4pt,
+  topsep=-1pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\resumeEntry}[4]{
+  \textbf{#1}\hfill #2\\
+  \textit{#3}\hfill #4\\[-10pt]
+}
+
+\newcommand{\projectEntry}[4]{
+  \textbf{#1}\hfill #4\\
+  \textit{#2} \;|\; \href{#3}{\textit{Demo}}\\[-10pt]
+}
+
+\begin{document}
+
+\begin{center}
+    {\Large \textbf{PHUONG (AIRI) PHAM}}\\[0pt]
+    Los Angeles, CA \;|\;
+    \href{mailto:phamairi@gmail.com}{phamairi@gmail.com} \;|\;
+    \href{https://www.linkedin.com/in/phuong-pham-airi/}{LinkedIn} \;|\;
+    \href{https://www.phuongp.com/}{phuongp.com}\\[0pt]
+\end{center}
+
+\section{Technical Skills}
+C++, C\#, Python, HLSL, GLSL, Slang, Vulkan, DirectX 11, OpenGL, Unreal Engine, Unity, Niagara, Maya, Git, Perforce
+
+\section{Education}
+\textbf{University of Southern California --- B.S. Computer Science Games \& M.S. Computer Science}\hfill May 2025
+
+\section{Work Experience}
+
+\resumeEntry{Respawn Entertainment --- Electronic Arts}{Los Angeles, CA}{Associate Technical Artist}{Jul 2025--Present}
+\begin{itemize}
+    \item Developed a reusable Unreal Engine content-ingestion pipeline that validates dependencies, reorganizes paths, resolves naming and Perforce compatibility issues for 46 externally developed assets comprising 200+ files across Star Wars productions; credited on \textit{Star Wars: Zero Company} and an upcoming \textit{Star Wars Jedi} title.
+    \item Automated Python-based auditing of 300+ external and 400+ internal art source files for \textit{Apex Legends} to identify missing assets, content differences, and projected production costs.
+    \item Scripted Maya tools to automate porting 60+ Respawn Substance Painter materials to the custom Source engine and analyze 100+ assets for performance comparison to support up-res effort.
+\end{itemize}
+
+\resumeEntry{Respawn Entertainment --- Electronic Arts}{Los Angeles, CA}{Technical Artist Intern}{May 2024--Aug 2024}
+\begin{itemize}
+    \item Engineered an Unreal Engine application for discovering, loading, and inspecting shared content across multiple Star Wars titles.
+    \item Implemented Blueprint/C++ workflows for asset collection, inspection, map and mesh previews, object teleportation, and EA Shared Assets Library integration in partnership with the Technical Art Director.
+\end{itemize}
+
+\resumeEntry{Goldman Sachs}{Salt Lake City, UT}{Software Engineer Intern}{Jun 2023--Aug 2023}
+\begin{itemize}
+    \item Architected an end-to-end data-ingestion service for Tax Operations that streamlined workflow to parse and validate large client datasets; stress-tested the backend with 1M+ records and 100+ MB files by benchmarking for the most memory-efficient database update strategies and utilizing multi-threaded paradigm for speed optimization.
+    \item Designed failure handling and scalability around production edge cases—including malformed inputs, bounded error reporting, large-file transfers, and concurrent users—and built load-testing workflows to evaluate service capacity and memory behavior under stress.
+\end{itemize}
+
+\section{Graphics Projects}
+
+\resumeEntry{Prime Engine Particle System \& Engine Features}{}{C++ \;|\; \href{https://www.phuongp.com/2024/10/01/particle-system/}{Demo}}{Oct 2024}
+\begin{itemize}
+    \item Built reusable C++ engine systems including a centralized physics manager, Sphere/AABB/OBB collision components, automatic component registration, collision response, gravity, and ground detection.
+    \item Designed a component-based CPU particle framework with object-attached emitters, configurable property curves, collision behavior, transparency, normal mapping, and flipbook animation.
+\end{itemize}
+
+\resumeEntry{Interactive Ocean Simulation}{}{Unity, HLSL, C\# \;|\; \href{https://www.phuongp.com/highlights/2025/09/10/ocean-simulation/}{Demo}}{Sep 2025}
+\begin{itemize}
+    \item Implemented a GPU-driven Unity ocean using compute shaders for Phillips-spectrum FFT waves, interactive iWave ripples, Jacobian foam, and GPU buoyancy sampling.
+    \item Kept visual displacement and floating-object motion synchronized by sampling the same GPU-generated displacement field, avoiding duplicate CPU-side wave calculations.
+\end{itemize}
+
+\resumeEntry{GPU-Driven Interactive Grass}{}{Unity, HLSL, C\# \;|\; \href{https://www.phuongp.com/highlights/2024/08/22/interactive-grass/}{Demo}}{Sep 2024}
+\begin{itemize}
+    \item Developed a GPU-driven grass simulation in Unity using HLSL compute shaders, modeling procedural B\'ezier blades under wind, stiffness, gravity, and object collisions.
+    \item Scaled dense grass fields through GPU compute culling and indirect rendering, with Gauss--Legendre integration maintaining consistent blade length during deformation.
+\end{itemize}
+
+
+\section{Game Projects}
+
+\resumeEntry{The Veiled Ones}{Los Angeles, CA}{Technical Artist \;|\; \href{https://www.phuongp.com/2024/03/11/the-veiled-ones/}{Blog}}{Sep 2023--Aug 2024}
+\begin{itemize}
+    \item Profiled CPU-bound Unity HDRP scenes with the Frame Debugger, identifying shader and keyword divergence across 2,000+ materials as the primary cause of 100+ fragmented SRP batches.
+    \item Built editor utilities to convert and standardize 3ds Max, Arnold, Autodesk Interactive, and HDRP Lit materials; configured occlusion culling with light baking to improve FPS from 15 to 50.
+    \item Authored gameplay and cinematic VFX---including SDF particles, decals, UV-distorted fire, smoke, and full-screen effects---while reducing overdraw and preserving the game's horror aesthetic.
+\end{itemize}
+
+\end{document}
