@@ -7,7 +7,7 @@ preview: /assets/game_engine/preview.webp
 tags: [computer-graphics, dx11, C++]
 ---
 
-Implemented a game engine using DX11 with the following features:\
+Implemented a game engine using DX11 with the following features:
 
 - Custom math library for vector and matrix calculation in SIMD
 - A rendering pipeline with texture support
