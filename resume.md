@@ -6,4 +6,4 @@ permalink: /resume/
 
 <object data="/assets/resume/Phuong_Pham_Resume.pdf" width="100%" height="800"></object>
 
-Last updated: May 2025
+Last updated: August 2026
